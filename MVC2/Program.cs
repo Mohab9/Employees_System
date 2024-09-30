@@ -1,13 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using MVC2.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
-builder.Services.AddMvc().AddRazorRuntimeCompilation();
-builder.Services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("ConStr1")));
+builder.Services.AddSession(); // Register session services
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,10 +22,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseSession(); // Enable session middleware
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Excel}/{action=Upload}/{id?}");
 
 app.Run();

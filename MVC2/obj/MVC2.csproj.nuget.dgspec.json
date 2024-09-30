@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mohab\\source\\repos\\MVC2\\MVC2\\MVC2.csproj": {}
+    "D:\\MVC2\\MVC2\\MVC2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mohab\\source\\repos\\MVC2\\MVC2\\MVC2.csproj": {
+    "D:\\MVC2\\MVC2\\MVC2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mohab\\source\\repos\\MVC2\\MVC2\\MVC2.csproj",
+        "projectUniqueName": "D:\\MVC2\\MVC2\\MVC2.csproj",
         "projectName": "MVC2",
-        "projectPath": "C:\\Users\\mohab\\source\\repos\\MVC2\\MVC2\\MVC2.csproj",
+        "projectPath": "D:\\MVC2\\MVC2\\MVC2.csproj",
         "packagesPath": "C:\\Users\\mohab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mohab\\source\\repos\\MVC2\\MVC2\\obj\\",
+        "outputPath": "D:\\MVC2\\MVC2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mohab\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.3.2, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[7.0.10, )"
